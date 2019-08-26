@@ -7,22 +7,18 @@
     "SecurityStatus": {
       "StatusCode": {
         "description": "Security status indicator - e.g. SPX- Cargo Secure for Passenger and All-Cargo Aircraft ",
-        "required": true,
         "type": "string"
       },
       "IssuedOn": {
         "description": "Date and time when the security status was issued",
-        "required": true,
         "type": "string"
       },
       "IssuedBy": {
         "description": "Name of person (or employee ID) and Regulated entity identifier (e.g. Regulated Agent Identifier) is mandatory",
-        "required": true,
         "$ref": "file:///company.json"
       },
       "RegulatedPartyType": {
         "description": "Party type - e.g. RA - Regulated Agent, KC - Known Consignor, AO - Aircraft Operator, RC - Regulated Carrier",
-        "required": true,
         "type": "string"
       }
     },
@@ -64,5 +60,6 @@
       "description": "Reference document",
       "$ref": "file:///external_reference.json"
     }
-  }
+  },
+  "required": ["StatusCode", "IssuedOn", "IssuedBy", "RegulatedPartyType"]
 }

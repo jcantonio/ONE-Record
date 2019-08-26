@@ -6,12 +6,10 @@
   "properties": {
     "EventTypeIndicator": {
       "description": "Indicates type of event e.g.  Scheduled, Estimated, Actual",
-      "required": true,
       "type": "string"
     },
     "DateTime": {
       "description": "Date and time of the event",
-      "required": true,
       "type": "datatime"
     },
     "EventCode": {
@@ -34,5 +32,6 @@
       "description": "Handling details",
       "$ref": "file:///handling.json"
     }
-  }
+  },
+  "required": ["EventTypeIndicator", "DateTime"]
 }

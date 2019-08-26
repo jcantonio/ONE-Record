@@ -6,12 +6,10 @@
   "properties": {
     "BookingRequestNumber": {
       "description": "Booking unique identifier",
-      "required": true,
       "type": "string"
     },
     "Date": {
       "description": "Booking date",
-      "required": true,
       "type": "datatime"
     },
     "AirWaybillNumber": {
@@ -30,5 +28,6 @@
       "description": "Details of individual transport segments",
       "$ref": "file:///transport_segment.json"
     }
-  }
+  },
+  "required": ["BookingRequestNumber", "Date"]
 }

@@ -9,13 +9,14 @@ Done
 - use #ref when referencing other schema elements instead of types
 - "type": "text" to "type": "string"
 - "type": "numeric" to "type": "number"
+- Use required Json Schema elements instead of required attributes
 
 ToDo
 
-- Use required Json Schema elements instead of required attributes
 - Use Array Json Schema elements instead of use of array like
   "OtherIdentifier": [{
   }],
+- Use Date format Json Schema elements instead of use of datatime
 - etc...
 
 # ONE-Record

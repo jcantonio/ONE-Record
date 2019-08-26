@@ -6,22 +6,18 @@
   "properties": {
     "HouseManifestID": {
       "description": "House Manifest unique identifier",
-      "required": true,
       "type": "string"
     },
     "Date": {
       "description": "House Manifest date",
-      "required": true,
       "type": "datatime"
     },
     "MasterAWBDetails": {
       "description": "Master Air Waybill details including Air Waybill number, Freight Forwarder, Origin, Flight number, Destination and Airline",
-      "required": true,
       "$ref": "file:///air_waybill.json"
     },
     "HouseWaybillDetails": {
       "description": "House Waybill details including House Waybill number, number of pieces, SLAC, gross weight, shipper, consignee, nature of goods",
-      "required": true,
       "$ref": "file:///house_waybill.json"
     },
     "TotalPieceCount": {
@@ -36,5 +32,11 @@
       "description": "Total gross weight of associated house waybills",
       "$ref": "file:///weight.json"
     }
-  }
+  },
+  "required": [
+    "HouseManifestID",
+    "Date",
+    "MasterAWBDetails",
+    "HouseWaybillDetails"
+  ]
 }

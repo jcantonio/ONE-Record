@@ -6,12 +6,12 @@
   "properties": {
     "PieceDetails": {
       "description": "Details of piece(s)",
-      "required": true,
       "$ref": "file:///logistics_component.json"
     },
     "RatingDetails": {
       "description": "Rating details",
       "$ref": "file:///rating.json"
     }
-  }
+  },
+  "required": ["PieceDetails"]
 }

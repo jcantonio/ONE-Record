@@ -24,7 +24,6 @@
         },
         "DateTime": {
           "description": "Date and time when the booking status is issued",
-          "required": true,
           "type": "datatime"
         },
         "IssuedBy": {
@@ -89,5 +88,6 @@
       "description": "Reference to document or logistics object (URI)",
       "$ref": "file:///external_reference.json"
     }
-  }
+  },
+  "required": ["DateTime"]
 }

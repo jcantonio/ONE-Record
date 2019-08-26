@@ -6,12 +6,10 @@
   "properties": {
     "HouseWaybillNumber": {
       "description": "House Waybill unique identifier",
-      "required": true,
       "type": "string"
     },
     "Date": {
       "description": "Air Waybill date",
-      "required": true,
       "type": "datatime"
     },
     "LoadTypeCode": {
@@ -52,17 +50,14 @@
     },
     "OriginDestination": {
       "description": "Origin and Destination location",
-      "required": true,
       "$ref": "file:///transport_segment.json"
     },
     "Shipper": {
       "description": "Shipper details",
-      "required": true,
       "$ref": "file:///company.json"
     },
     "Consignee": {
       "description": "Consignee details",
-      "required": true,
       "$ref": "file:///company.json"
     },
     "FreightForwarder": {
@@ -79,12 +74,10 @@
     },
     "HouseWaybillLine": {
       "description": "Waybill line details - e.g. as shown on Air or House Waybill",
-      "required": true,
       "$ref": "file:///piece_grouping.json"
     },
     "HouseWaybillLineTotals": {
       "description": "House waybill line totals",
-      "required": true,
       "$ref": "file:///piece_grouping_totals.json"
     },
     "Handling": {
@@ -221,7 +214,6 @@
         },
         "TotalPrepaidCharges": {
           "description": "Total prepaid charges amount",
-          "required": true,
           "$ref": "file:///value.json"
         }
       },
@@ -248,7 +240,6 @@
         },
         "TotalCollectCharges": {
           "description": "Total collect charges amount",
-          "required": true,
           "$ref": "file:///value.json"
         },
         "InDestinationCurrency": {
@@ -347,5 +338,16 @@
       "description": "Total charge amount of all piece groups ",
       "$ref": "file:///value.json"
     }
-  }
+  },
+  "required": [
+    "HouseWaybillNumber",
+    "Date",
+    "OriginDestination",
+    "Shipper",
+    "Consignee",
+    "HouseWaybillLine",
+    "HouseWaybillLineTotals",
+    "TotalPrepaidCharges",
+    "TotalCollectCharges"
+  ]
 }
