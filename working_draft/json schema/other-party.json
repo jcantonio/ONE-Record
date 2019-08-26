@@ -1,16 +1,16 @@
 {
-	"@context": {
-    	"@vocab": "http://cargo.iata.org#"
+  "@context": {
+    "@vocab": "http://cargo.iata.org#"
+  },
+  "type": "object",
+  "properties": {
+    "RoleName": {
+      "description": "Role of other party - e.g. Notify party, Nominated agent, Customs broker, Manufacturer, Importer, Payer, Payee, ShipTo, ShipFrom, BillTo, BillFrom, RemitTo, RemitFrom ",
+      "type": "string"
     },
-    "other-party":
-      {
-      "RoleName": {
-         "description": "Role of other party - e.g. Notify party, Nominated agent, Customs broker, Manufacturer, Importer, Payer, Payee, ShipTo, ShipFrom, BillTo, BillFrom, RemitTo, RemitFrom ",
-         "type": "text"
-      },
-      "CompanyDetails": {
-         "description": "Company details",
-         "type": "company.json"
-      }
-   }
+    "CompanyDetails": {
+      "description": "Company details",
+      "$ref": "file:///company.json"
+    }
+  }
 }

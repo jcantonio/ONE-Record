@@ -1,16 +1,16 @@
 {
-	"@context": {
-    	"@vocab": "http://cargo.iata.org#"
+  "@context": {
+    "@vocab": "http://cargo.iata.org#"
+  },
+  "type": "object",
+  "properties": {
+    "ConversionFactor": {
+      "description": "Volume to weight conversion factor",
+      "$ref": "file:///value.json"
     },
-    "volumetric-weight":
-      {
-      "ConversionFactor": {
-         "description": "Volume to weight conversion factor",
-         "type": "value.json"
-      },
-      "ChargeableWeight": {
-         "description": "Chargeable weight",
-         "type": "value.json"
-      }
-   }
+    "ChargeableWeight": {
+      "description": "Chargeable weight",
+      "$ref": "file:///value.json"
+    }
+  }
 }

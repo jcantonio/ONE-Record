@@ -1,20 +1,20 @@
 {
-	"@context": {
-    	"@vocab": "http://cargo.iata.org#"
+  "@context": {
+    "@vocab": "http://cargo.iata.org#"
+  },
+  "type": "object",
+  "properties": {
+    "Latitude": {
+      "description": "Location latitude ",
+      "$ref": "file:///value.json"
     },
-    "geolocation":
-      {
-      "Latitude": {
-         "description": "Location latitude ",
-         "type": "value.json"
-      },
-      "Longitude": {
-         "description": "Location longitude ",
-         "type": "value.json"
-      },
-      "Elevation": {
-         "description": "Elevation from sea level",
-         "type": "value.json"
-      }
-   }
+    "Longitude": {
+      "description": "Location longitude ",
+      "$ref": "file:///value.json"
+    },
+    "Elevation": {
+      "description": "Elevation from sea level",
+      "$ref": "file:///value.json"
+    }
+  }
 }

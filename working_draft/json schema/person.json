@@ -1,60 +1,62 @@
 {
-	"@context": {
-    	"@vocab": "http://cargo.iata.org#"
+  "@context": {
+    "@vocab": "http://cargo.iata.org#"
+  },
+  "type": "object",
+  "properties": {
+    "ContactType": {
+      "description": "Contact type - e.g. Emergency contact, Customs contact, Customer contact",
+      "type": "string"
     },
-    "person":
+    "Salutation": {
+      "description": "Salutation ",
+      "type": "string"
+    },
+    "FirstName": {
+      "description": "First name / given name",
+      "type": "string"
+    },
+    "MiddleName": {
+      "description": "Middle name/ other name",
+      "type": "string"
+    },
+    "LastName": {
+      "description": "Last name / family name / surname",
+      "type": "string"
+    },
+    "JobTitle": {
+      "description": "Job title / position",
+      "type": "string"
+    },
+    "Department": {
+      "description": "Department / Division / Unit",
+      "type": "string"
+    },
+    "EmployeeID": {
+      "description": "Employee ID",
+      "type": "string"
+    },
+    "ContactDetails": [
       {
-      "ContactType": {
-         "description": "Contact type - e.g. Emergency contact, Customs contact, Customer contact",
-         "type": "text"
-      },
-      "Salutation": {
-         "description": "Salutation ",
-         "type": "text"
-      },
-      "FirstName": {
-         "description": "First name / given name",
-         "type": "text"
-      },
-      "MiddleName": {
-         "description": "Middle name/ other name",
-         "type": "text"
-      },
-      "LastName": {
-         "description": "Last name / family name / surname",
-         "type": "text"
-      },
-      "JobTitle": {
-         "description": "Job title / position",
-         "type": "text"
-      },
-      "Department": {
-         "description": "Department / Division / Unit",
-         "type": "text"
-      },
-      "EmployeeID": {
-         "description": "Employee ID",
-         "type": "text"
-      },
-      "ContactDetails": [{
-         "PhoneNumber": {
-            "description": "Phone number",
-            "type": "text"
-         },
-         "EmailAddress": {
-            "description": "E-mail address",
-            "type": "text"
-         },
-         "Other": {
-            "Type": {
-               "description": "Contact type - e.g. Skype ",
-               "type": "text"
-            },
-            "Detail": {
-               "description": "Contact details e.g. Skype ID ",
-               "type": "text"
-            }
-         }
-      }]
-   }
+        "PhoneNumber": {
+          "description": "Phone number",
+          "type": "string"
+        },
+        "EmailAddress": {
+          "description": "E-mail address",
+          "type": "string"
+        },
+        "Other": {
+          "Type": {
+            "description": "Contact type - e.g. Skype ",
+            "type": "string"
+          },
+          "Detail": {
+            "description": "Contact details e.g. Skype ID ",
+            "type": "string"
+          }
+        }
+      }
+    ]
+  }
 }

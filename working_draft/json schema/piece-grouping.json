@@ -1,17 +1,17 @@
 {
-	"@context": {
-    	"@vocab": "http://cargo.iata.org#"
+  "@context": {
+    "@vocab": "http://cargo.iata.org#"
+  },
+  "type": "object",
+  "properties": {
+    "PieceDetails": {
+      "description": "Details of piece(s)",
+      "required": true,
+      "$ref": "file:///logistics_component.json"
     },
-    "piece-grouping":
-      {
-      "PieceDetails": {
-         "description": "Details of piece(s)",
-         "required": true,
-         "type": "logistics_component.json"
-      },
-      "RatingDetails": {
-         "description": "Rating details",
-         "type": "rating.json"
-      }
-   }
+    "RatingDetails": {
+      "description": "Rating details",
+      "$ref": "file:///rating.json"
+    }
+  }
 }

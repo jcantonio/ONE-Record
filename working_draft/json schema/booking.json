@@ -1,35 +1,34 @@
 {
-	"@context": {
-    	"@vocab": "http://cargo.iata.org#"
+  "@context": {
+    "@vocab": "http://cargo.iata.org#"
+  },
+  "type": "object",
+  "properties": {
+    "BookingRequestNumber": {
+      "description": "Booking unique identifier",
+      "required": true,
+      "type": "string"
     },
-    "booking":
-      {
-      "BookingRequestNumber": {
-         "description": "Booking unique identifier",
-         "required": true,
-         "type": "text"
-      },
-      "Date": {
-         "description": "Booking date",
-         "required": true,
-         "type": "datetime"
-      },
-      "AirWaybillNumber": {
-         "description": "Air Waybill number",
-         "type": "text"
-      },
-      "AirWaybillReference": {
-         "description": "Air Waybill URI",
-         "type": "undefined"
-      },
-      "BookingType": {
-         "description": "Type of booking - e.g: Freesale, Allocation, BlockSpace Agreement",
-         "type": "text"
-      },
-      "SegmentDetail": {
-         "description": "Details of individual transport segments",
-         "type": "transport_segment.json"
-      }
-   }
-
+    "Date": {
+      "description": "Booking date",
+      "required": true,
+      "type": "datatime"
+    },
+    "AirWaybillNumber": {
+      "description": "Air Waybill number",
+      "type": "string"
+    },
+    "AirWaybillReference": {
+      "description": "Air Waybill URI",
+      "type": "undefined"
+    },
+    "BookingType": {
+      "description": "Type of booking - e.g: Freesale, Allocation, BlockSpace Agreement",
+      "type": "string"
+    },
+    "SegmentDetail": {
+      "description": "Details of individual transport segments",
+      "$ref": "file:///transport_segment.json"
+    }
+  }
 }

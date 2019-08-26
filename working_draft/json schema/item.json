@@ -1,64 +1,63 @@
 {
-	"@context": {
-    	"@vocab": "http://cargo.iata.org#"
+  "@context": {
+    "@vocab": "http://cargo.iata.org#"
+  },
+  "type": "object",
+  "properties": {
+    "ItemIdentifier": {
+      "description": "Item serial number or unique item identifier",
+      "type": "string"
     },
-    "item":
+    "OtherIdentifier": [
       {
-      "ItemIdentifier": {
-         "description": "Item serial number or unique item identifier",
-         "type": "text"
-      },
-      "OtherIdentifier": [{
-         "Type": {
-            "description": "Identifier type or description",
-            "type": "text"
-         },
-         "Identifier": {
-            "description": "Item identifier",
-            "type": "text"
-         }
-      }],
-      "Production": {
-         "BatchNumber": {
-            "description": "Production batch number / reference",
-            "type": "text"
-         },
-         "LotNumber": {
-            "description": "Production lot number / reference",
-            "type": "text"
-         },
-         "Date": {
-            "description": "Production date",
-            "type": "datetime"
-         },
-         "ProductExpiryDate": {
-            "description": "Product expiry date - e.g. for perishables goods or goods with programmed obsolescence",
-            "type": "datetime"
-         }
-      },
-      "ProductionCountry": {
-         "CountryCode": {
-            "description": "Production country ISO code. Refer ISO 3166-2",
-            "type": "text"
-         },
-         "CountryName": {
-            "description": "If no CountryCode provided, production country name",
-            "type": "text"
-         }
-      },
-      "Product": [{
-         "description": "Product details",
-         "type": "product.json"
-      }],
-      "TargetCountry": {
-         "CountryCode": {
-            "description": "Target country ISO code. Refer ISO 3166-2",
-            "type": "text"
-         },
-         "CountryName": {
-            "description": "If CountryCode not provided, target country name",
-            "type": "text"
-         }
+        "Type": {
+          "description": "Identifier type or description",
+          "type": "string"
+        },
+        "Identifier": {
+          "description": "Item identifier",
+          "type": "string"
+        }
       }
-   }
+    ],
+    "Production": {
+      "BatchNumber": {
+        "description": "Production batch number / reference",
+        "type": "string"
+      },
+      "LotNumber": {
+        "description": "Production lot number / reference",
+        "type": "string"
+      },
+      "Date": {
+        "description": "Production date",
+        "type": "datatime"
+      },
+      "ProductExpiryDate": {
+        "description": "Product expiry date - e.g. for perishables goods or goods with programmed obsolescence",
+        "type": "datatime"
+      }
+    },
+    "ProductionCountry": {
+      "CountryCode": {
+        "description": "Production country ISO code. Refer ISO 3166-2",
+        "type": "string"
+      },
+      "CountryName": {
+        "description": "If no CountryCode provided, production country name",
+        "type": "string"
+      }
+    },
+    "TargetCountry": {
+      "CountryCode": {
+        "description": "Target country ISO code. Refer ISO 3166-2",
+        "type": "string"
+      },
+      "CountryName": {
+        "description": "If CountryCode not provided, target country name",
+        "type": "string"
+      }
+    },
+    "Product": [{}]
+  }
 }

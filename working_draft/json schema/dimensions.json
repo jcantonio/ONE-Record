@@ -1,24 +1,24 @@
 {
-	"@context": {
-    	"@vocab": "http://cargo.iata.org#"
+  "@context": {
+    "@vocab": "http://cargo.iata.org#"
+  },
+  "type": "object",
+  "properties": {
+    "Width": {
+      "description": "Width",
+      "$ref": "value"
     },
-    "dimensions":
-      {
-      "Width": {
-         "description": "Width",
-         "type": "value.json"
-      },
-      "Length": {
-         "description": "Lenght",
-         "type": "value.json"
-      },
-      "Height": {
-         "description": "Height",
-         "type": "value.json"
-      },
-      "Volume": {
-         "description": "Volume",
-         "type": "value.json"
-      }
-   }
+    "Length": {
+      "description": "Lenght",
+      "$ref": "value"
+    },
+    "Height": {
+      "description": "Height",
+      "$ref": "file:///value.json"
+    },
+    "Volume": {
+      "description": "Volume",
+      "$ref": "value"
+    }
+  }
 }
