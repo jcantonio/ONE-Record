@@ -1,101 +1,101 @@
 {
-   "@context":{
-      "@vocab":"http://cargo.iata.org#"
-   },
-   "type":"object",
-   "properties":{
-      "Manufacturer":{
-         "description":"Manufacturing company details and contacts",
-         "$ref":"company"
-      },
-      "ProductDescription":{
-         "description":"Product description",
-         "type":"string"
-      },
-      "ProductIdentifier":{
-         "description":"Manufacturer's unique product identifier",
-         "type":"string"
-      },
-      "OtherIdentifier":{
-         "type":"array",
-         "items":{
-            "type":"object",
-            "properties":{
-               "Type":{
-                  "description":"Type of the product identifer - e.g. Bar code, UPC, EAN, Amazon…",
-                  "type":"string"
-               },
-               "Identifier":{
-                  "description":"Product identifier",
-                  "type":"string"
-               }
-            }
-         }
-      },
-      "UNNumber":{
-         "description":"Reference identifying the United Nations Dangerous Goods serial number assigned within the UN to substances and articles contained in a list of the dangerous goods most commonly carried. e.g. 1189 - Ethylene glycol monomethyl ether acetate",
-         "type":"string"
-      },
-      "Commodity":{
-         "type":"array",
-         "items":{
-            "type":"object",
-            "properties":{
-               "Type":{
-                  "description":"Issuer of the Commodity Code - e.g. Brussels Tariff Nomenclature, EU Harmonized System Code, UN Standard International Trade…",
-                  "type":"string"
-               },
-               "Code":{
-                  "description":"Unique Commodity Code e.g. 391721 - Tubes, Pipes And Hoses, Rigid, Of Polymers Of Ethylene",
-                  "type":"string"
-               },
-               "Name":{
-                  "description":"If no Code provided, name of commodity",
-                  "type":"string"
-               }
-            }
-         }
-      },
-      "Characteristic":{
-         "type":"array",
-         "items":{
-            "type":"object",
-            "properties":{
-               "Type":{
-                  "description":"Product characteristic code - e.g. CLR - Color",
-                  "type":"string"
-               },
-               "Value":{
-                  "description":"Product characteristic value / attribute - e.g. Blue…",
-                  "type":"string"
-               }
-            }
-         }
-      },
-      "Weight":{
-         "description":"Product weight details",
-         "$ref":"weight"
-      },
-      "Dimensions":{
-         "description":"Product dimensions details",
-         "$ref":"dimensions"
-      },
-      "Price":{
-         "type":"object",
-         "properties":{
-            "UnitCode":{
-               "description":"Unit code for item - e.g. piece, unit, kg, pack, hour, minute…",
-               "type":"string"
-            },
-            "UnitPrice":{
-               "description":"Product price per unit in the base currency",
-               "$ref":"value"
-            },
-            "QuantityForUnitPrice":{
-               "description":"Product quantity for unit price - e.g. 12 (eggs for one USD 1)",
-               "type":"integer"
-            }
-         }
+  "@context": {
+    "@vocab": "http://cargo.iata.org#"
+  },
+  "type": "object",
+  "properties": {
+    "Manufacturer": {
+      "description": "Manufacturing company details and contacts",
+      "$ref": "file:///company.json"
+    },
+    "ProductDescription": {
+      "description": "Product description",
+      "type": "string"
+    },
+    "ProductIdentifier": {
+      "description": "Manufacturer's unique product identifier",
+      "type": "string"
+    },
+    "OtherIdentifier": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "description": "Type of the product identifer - e.g. Bar code, UPC, EAN, Amazon…",
+            "type": "string"
+          },
+          "Identifier": {
+            "description": "Product identifier",
+            "type": "string"
+          }
+        }
       }
-   }
+    },
+    "UNNumber": {
+      "description": "Reference identifying the United Nations Dangerous Goods serial number assigned within the UN to substances and articles contained in a list of the dangerous goods most commonly carried. e.g. 1189 - Ethylene glycol monomethyl ether acetate",
+      "type": "string"
+    },
+    "Commodity": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "description": "Issuer of the Commodity Code - e.g. Brussels Tariff Nomenclature, EU Harmonized System Code, UN Standard International Trade…",
+            "type": "string"
+          },
+          "Code": {
+            "description": "Unique Commodity Code e.g. 391721 - Tubes, Pipes And Hoses, Rigid, Of Polymers Of Ethylene",
+            "type": "string"
+          },
+          "Name": {
+            "description": "If no Code provided, name of commodity",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Characteristic": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Type": {
+            "description": "Product characteristic code - e.g. CLR - Color",
+            "type": "string"
+          },
+          "Value": {
+            "description": "Product characteristic value / attribute - e.g. Blue…",
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Weight": {
+      "description": "Product weight details",
+      "$ref": "weight"
+    },
+    "Dimensions": {
+      "description": "Product dimensions details",
+      "$ref": "dimensions"
+    },
+    "Price": {
+      "type": "object",
+      "properties": {
+        "UnitCode": {
+          "description": "Unit code for item - e.g. piece, unit, kg, pack, hour, minute…",
+          "type": "string"
+        },
+        "UnitPrice": {
+          "description": "Product price per unit in the base currency",
+          "$ref": "value"
+        },
+        "QuantityForUnitPrice": {
+          "description": "Product quantity for unit price - e.g. 12 (eggs for one USD 1)",
+          "type": "integer"
+        }
+      }
+    }
+  }
 }

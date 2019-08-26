@@ -13,7 +13,6 @@ Done
 ToDo
 
 - Use required Json Schema elements instead of required attributes
-- "Manufacturer.json" does not exist?
 - Use Array Json Schema elements instead of use of array like
   "OtherIdentifier": [{
   }],
